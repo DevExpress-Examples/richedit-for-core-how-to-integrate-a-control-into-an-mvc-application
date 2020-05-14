@@ -1,4 +1,4 @@
-# RichEdit for Core - How to integrate a control into an MVC application
+# RichEdit for ASP.NET Core - How to integrate a control into an MVC application
 
 This example illustrates a possible way of integrating a client part of ASP.NET Core Rich Edit into an MVC application. This can be done as follows:
 1. Right-click the application's name in the **Solution Explorer** and select **Add | Add New Item**. In the invoked **Add New Item** dialog, select the **Installed | Visual C# | ASP.NET Core | Web** category and the **npm Configuration File** item template. Click **Add**.
@@ -16,13 +16,20 @@ This adds the **package.json** file to the project. Open this file and add the f
 ```
 
 2. Create a RichEdit bundle using recommendations from this help topic: [Create a RichEdit Bundle](https://docs.devexpress.com/AspNetCore/401721/office-inspired-controls/get-started/richedit-bundle#create-a-richedit-bundle) 
-3. Register the necessary script and styles in the default layout view (usually, it is "_Layout.cshtml") **before the DevExpress script registration**:
+3. Register the necessary script and styles in the default layout view (usually, it is "\_Layout.cshtml"). If you are using [DevExpress server-side MVC extensions](https://demos.devexpress.com/mvc/), you need to register the RichEdit scripts and styles **before the DevExpress script registration**:
 
 ```razor
 @Styles.Render("~/node_modules/devextreme/dist/css/dx.common.css")
 @Styles.Render("~/node_modules/devextreme/dist/css/dx.light.compact.css")
 @Styles.Render("~/node_modules/devexpress-richedit/dist/dx.richedit.css")
 @Scripts.Render("~/node_modules/devexpress-richedit/dist/custom/dx.richedit.min.js")
+...
+@Html.DevExpress().GetStyleSheets(
+...
+)
+@Html.DevExpress().GetScripts(
+...
+)
 ```
 
 You may need to install the "Microsoft.AspNet.Web.Optimization" package for this.
@@ -52,11 +59,7 @@ End Function
 
 ```cs
 ViewBag.Document = Convert.ToBase64String(System.IO.File.ReadAllBytes(Server.MapPath("~/Docs/template.docx")));
-```
-
-```vb
-ViewBag.Document = Convert.ToBase64String(System.IO.File.ReadAllBytes(Server.MapPath("~/Docs/template.docx")))
-```
+```  
 
 6. Use the static **DevExpress.RichEdit.createOptions** and **DevExpress.RichEdit.create** methods to create control options and the control itself respectively. To simplify this process, we created the "creator.js" file located at the "~/Scripts" folder.
 It is enough to call the **createRichEdit** method located in this file:
