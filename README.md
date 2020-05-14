@@ -56,3 +56,16 @@ ViewBag.Document = Convert.ToBase64String(System.IO.File.ReadAllBytes(Server.Map
 ```
 
 6. Use the static **DevExpress.RichEdit.createOptions** and **DevExpress.RichEdit.create** methods to create control options and the control itself respectively. To simplify this process, we created the "creator.js" file located at the "~/Scripts" folder.
+It is enough to call the **createRichEdit** method located in this file:
+
+```razor
+<script>
+    $(document).ready(function () {
+        const rich = createRichEdit($("#rich-container"), {
+            exportUrl: '@Url.Action("ExportDocument", "Home", Nothing, Request.Url.Scheme)',
+            document: "@ViewBag.Document",
+        });
+        window.rich = rich;
+    });
+</script>
+```
