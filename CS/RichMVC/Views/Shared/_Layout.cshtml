@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>@ViewBag.Title</title>
+
+    @Scripts.Render("~/node_modules/devexpress-richedit/dist/custom/dx.richedit.min.js")
+    @Styles.Render("~/node_modules/devexpress-richedit/dist/dx.richedit.css")
+    @Styles.Render("~/node_modules/devextreme/dist/css/dx.common.css")
+    @Styles.Render("~/node_modules/devextreme/dist/css/dx.light.compact.css")
+
+
+    @Html.DevExpress().GetStyleSheets(
+        new StyleSheet { ExtensionSuite = ExtensionSuite.NavigationAndLayout },
+        new StyleSheet { ExtensionSuite = ExtensionSuite.Editors }
+    )
+    @Html.DevExpress().GetScripts(
+        new Script { ExtensionSuite = ExtensionSuite.NavigationAndLayout },
+        new Script { ExtensionSuite = ExtensionSuite.Editors }
+    )
+
+</head>
+
+<body>
+    @RenderBody()
+</body>
+</html>
