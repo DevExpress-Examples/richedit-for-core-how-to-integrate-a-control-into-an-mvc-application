@@ -19,10 +19,10 @@ This adds the **package.json** file to the project. Open this file and add the f
 3. Register the necessary script and styles in the default layout view (usually, it is "_Layout.cshtml") **before the DevExpress script registration**:
 
 ```razor
-@Scripts.Render("~/node_modules/devexpress-richedit/dist/custom/dx.richedit.min.js")
-@Styles.Render("~/node_modules/devexpress-richedit/dist/dx.richedit.css")
 @Styles.Render("~/node_modules/devextreme/dist/css/dx.common.css")
 @Styles.Render("~/node_modules/devextreme/dist/css/dx.light.compact.css")
+@Styles.Render("~/node_modules/devexpress-richedit/dist/dx.richedit.css")
+@Scripts.Render("~/node_modules/devexpress-richedit/dist/custom/dx.richedit.min.js")
 ```
 
 You may need to install the "Microsoft.AspNet.Web.Optimization" package for this.
@@ -53,6 +53,7 @@ End Function
 ```cs
 ViewBag.Document = Convert.ToBase64String(System.IO.File.ReadAllBytes(Server.MapPath("~/Docs/template.docx")));
 ```
+
 ```vb
 ViewBag.Document = Convert.ToBase64String(System.IO.File.ReadAllBytes(Server.MapPath("~/Docs/template.docx")))
 ```
