@@ -3,6 +3,7 @@
 This example illustrates a possible way of integrating a client part of ASP.NET Core Rich Edit into an MVC application. This can be done as follows:
 1. Right-click the application's name in the **Solution Explorer** and select **Add | Add New Item**. In the invoked **Add New Item** dialog, select the **Installed | Visual C# | ASP.NET Core | Web** category and the **npm Configuration File** item template. Click **Add**.
 This adds the **package.json** file to the project. Open this file and add the following dependencies:
+```json
 {
   "version": "1.0.0",
   "name": "asp.net",
@@ -12,6 +13,7 @@ This adds the **package.json** file to the project. Open this file and add the f
     "devexpress-richedit": "20.1.3"
   }
 }
+```
 
 2. Create a RichEdit bundle using recommendations from this help topic: [Create a RichEdit Bundle](https://docs.devexpress.com/AspNetCore/401721/office-inspired-controls/get-started/richedit-bundle#create-a-richedit-bundle) 
 3. Register the necessary script and styles in the default layout view (usually, it is "_Layout.cshtml") **before the DevExpress script registration**:
@@ -73,8 +75,8 @@ It is enough to call the **createRichEdit** method located in this file:
 <!-- default file list -->
 *Files to look at*:
 
-* [Index.cshtml](./CS/RichMVC/Views/Home/Index.cshtml)
-* [_Layout.cshtml](./CS/RichMVC/Views/Shared/_Layout.cshtml)
+* [Index.cshtml](./CS/RichMVC/Views/Home/Index.cshtml) (VB: [Index.vbhtml](./VB/RichMVCVB/Views/Home/Index.vbhtml))
+* [_Layout.cshtml](./CS/RichMVC/Views/Shared/_Layout.cshtml) (VB: [_Layout.vbhtml](./VB/RichMVCVB/Views/Shared/_Layout.vbhtml))
 * [creator.js](./CS/RichMVC/Scripts/creator.js)
-* [HomeController.cs](./CS/RichMVC/Controller/HomeController.cs)
+* [HomeController.cs](./CS/RichMVC/Controllers/HomeController.cs) (VB: [HomeController.vb](./VB/RichMVCVB/Controllers/HomeController.vb))
 <!-- default file list end -->
