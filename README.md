@@ -1,8 +1,8 @@
 # RichEdit for Core - How to integrate a control into an MVC application
 
 This example illustrates a possible way of integrating a client part of ASP.NET Core Rich Edit into an MVC application. This can be done as follows:
-1. Right-click the application's name in the Solution Explorer and select Add | Add New Item. In the invoked Add New Item dialog, select the Installed | Visual C# | ASP.NET Core | Web category and the npm Configuration File item template. Click Add.
-This adds the package.json file to the project. Open this file and add the following dependencies:
+1. Right-click the application's name in the **Solution Explorer** and select **Add | Add New Item**. In the invoked **Add New Item** dialog, select the **Installed | Visual C# | ASP.NET Core | Web** category and the **npm Configuration File** item template. Click **Add**.
+This adds the **package.json** file to the project. Open this file and add the following dependencies:
 {
   "version": "1.0.0",
   "name": "asp.net",
@@ -69,3 +69,12 @@ It is enough to call the **createRichEdit** method located in this file:
     });
 </script>
 ```
+
+<!-- default file list -->
+*Files to look at*:
+
+* [Index.cshtml](./CS/RichMVC/Views/Home/Index.cshtml)
+* [_Layout.cshtml](./CS/RichMVC/Views/Shared/_Layout.cshtml)
+* [creator.js](./CS/RichMVC/Scripts/creator.js)
+* [HomeController.cs](./CS/RichMVC/Controller/HomeController.cs)
+<!-- default file list end -->
