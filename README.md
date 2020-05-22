@@ -1,5 +1,9 @@
 # RichEdit for ASP.NET Core - How to integrate a control into an MVC application
 
+## Requirements
+* To use the RichEdit control in an Angular application, you need to have a [Universal, DXperience, or ASP.NET subscription](https://www.devexpress.com/buy/net/).
+* Versions of the devexpress npm packages should be identical (their major and minor versions should be the same).
+
 This example illustrates a possible way of integrating a client part of ASP.NET Core Rich Edit into an MVC application. This can be done as follows:
 1. Right-click the application's name in the **Solution Explorer** and select **Add | Add New Item**. In the invoked **Add New Item** dialog, select the **Installed | Visual C# | ASP.NET Core | Web** category and the **npm Configuration File** item template. Click **Add**.
 This adds the **package.json** file to the project. Open this file and add the following dependencies:
