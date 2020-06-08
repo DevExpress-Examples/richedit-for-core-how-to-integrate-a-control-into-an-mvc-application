@@ -41,21 +41,48 @@ You may need to install the "Microsoft.AspNet.Web.Optimization" package for this
 4. Create an action method for the document export:
 
 ```cs
+private const string documentFolderPath = "~/Docs/";
+...
 [HttpPost]
 public ActionResult ExportDocument(string base64, string fileName, int format, string reason)
 {
 	byte[] fileContent = Convert.FromBase64String(base64);
-	System.IO.File.WriteAllBytes(Server.MapPath($"~/Docs/{fileName}.docx"), fileContent);
+	System.IO.File.WriteAllBytes(Server.MapPath($"{documentFolderPath}{fileName}.{GetExtension(format)}"), fileContent);
 	return new EmptyResult();
+}
+
+private static string GetExtension(int format)
+{
+	switch (format)
+	{
+		case 4: return "docx";
+		case 3: return "rtf";
+		case 1: return "txt";
+	}
+	return "docx";
 }
 ```
 
 ```vb
+Private Const documentFolderPath = "~/Docs/"
+...
 <HttpPost>
 Public Function ExportDocument(ByVal base64 As String, ByVal fileName As String, ByVal format As Integer, ByVal reason As String) As ActionResult
 	Dim fileContent As Byte() = Convert.FromBase64String(base64)
 	System.IO.File.WriteAllBytes(Server.MapPath($"~/Docs/{fileName}.docx"), fileContent)
 	Return New EmptyResult()
+End Function
+
+Private Shared Function GetExtension(ByVal format As Integer) As String
+	Select Case format
+		Case 4
+			Return "docx"
+		Case 3
+			Return "rtf"
+		Case 1
+			Return "txt"
+	End Select
+	Return "docx"
 End Function
 ```
 
