@@ -1,13 +1,13 @@
-# RichEdit for ASP.NET Core - How to integrate a control into an MVC application
+# Web Rich Text Editor - How to integrate a control into an MVC application
 
 ## Requirements
 * To use the RichEdit control in an ASP.NET MVC application, you need to have a [Universal, DXperience, or ASP.NET subscription](https://www.devexpress.com/buy/net/).
 * Versions of the devexpress npm packages should be identical (their major and minor versions should be the same).
 
-This example illustrates a possible way of integrating a client part of ASP.NET Core Rich Edit into an MVC application using steps from the following help topic: [Rich Text Editor > Get Started > MVC Application](https://docs.devexpress.com/AspNetCore/401873/rich-edit/get-started/mvc-application).
+This example illustrates a possible way of integrating the client Rich Text Editor into an MVC application using steps from the following help topic: [Rich Text Editor > Get Started > MVC Application](https://docs.devexpress.com/AspNetCore/401873/rich-edit/get-started/mvc-application).
 
 ***See also:***  
-[RichEdit for ASP.NET Core - How to integrate a control into an ASP.NET Web Forms application](https://github.com/DevExpress-Examples/richedit-for-core-how-to-integrate-a-control-into-an-asp-net-web-forms-application)
+[Web Rich Text Editor - How to integrate a control into an ASP.NET Web Forms application](https://github.com/DevExpress-Examples/richedit-for-core-how-to-integrate-a-control-into-an-asp-net-web-forms-application)
 
 <!-- default file list -->
 *Files to look at*:
