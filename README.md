@@ -32,7 +32,7 @@ This example illustrates a possible way of integrating the client Rich Text Edit
 
 - [Web Rich Text Editor - How to integrate a control into an ASP.NET Web Forms application](https://github.com/DevExpress-Examples/richedit-for-core-how-to-integrate-a-control-into-an-asp-net-web-forms-application)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=richedit-for-core-how-to-integrate-a-control-into-an-mvc-application&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=richedit-for-core-how-to-integrate-a-control-into-an-mvc-application&~~~was_helpful=no)
 
